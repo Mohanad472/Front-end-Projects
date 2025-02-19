@@ -1,0 +1,526 @@
+/* .navbar {
+  padding-block: 20px;
+}
+
+.nav-item {
+  padding: 10px 0 10px 30px;
+} */
+
+:root {
+  --mainColor: #0078ff;
+  --bgColor: #f5f5f5;
+}
+
+.nav-item {
+  --bs-nav-link-color: rgb(255, 255, 255);
+  --bs-nav-link-hover-color: rgb(255, 255, 255);
+  padding: 10px 0 10px 30px;
+}
+
+a.nav-link {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+nav a.navbar-brand {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+a.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  bottom: -5px;
+  transition: all 0.3s;
+}
+
+a.nav-link:hover::before {
+  width: 80%;
+}
+
+.modal.fade {
+  background-color: rgb(70, 70, 70);
+}
+
+.modal-custom {
+  max-width: 97vw !important; /* Ensures modal takes 90% width */
+  height: 97%;
+
+  margin: auto; /* Centers the modal */
+}
+
+.modal-title-custom {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.modal-content-custom {
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+}
+
+.modal {
+  pointer-events: auto; /* Allows interaction with page */
+}
+
+.modal .modal-body ul li {
+  padding: 10px 20px;
+}
+
+.modal .modal-body ul li button {
+  --bs-btn-close-opacity: 1;
+  --bs-btn-close-hover-opacity: 1;
+}
+
+.modal .modal-body ul li button:hover a {
+  color: var(--mainColor);
+}
+
+.modal .modal-body ul li a {
+  color: #4e4e4e;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.modal .modal-body .dropdown-menu {
+  width: calc(100% - 40px);
+}
+
+.modal .modal-body .dropdown a {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.modal .modal-body .dropdown a:hover {
+  color: var(--mainColor);
+}
+
+.modal .modal-body .dropdown a::after {
+  position: absolute;
+  right: 0;
+}
+
+.btn-close {
+  --bs-btn-close-bg: url(../images/icon.png) !important;
+}
+
+.modal-body {
+  background-color: white;
+}
+
+.home {
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.home h1 {
+  font-size: 72px;
+  line-height: 86px;
+  font-weight: 600;
+}
+
+.home span {
+  font-size: 40px !important;
+  line-height: 60px !important;
+  font-weight: 600 !important;
+}
+
+.services,
+.about {
+  background-color: var(--bgColor);
+  padding-block: 64px;
+}
+
+.about .container {
+  padding-block: 64px;
+}
+
+.progress {
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+.about .inner h2 {
+  position: relative;
+}
+
+.about .inner h2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: var(--mainColor);
+  bottom: -10px;
+}
+
+.portfolio .line,
+.services .line,
+.blog .line {
+  width: 40px;
+  height: 5px;
+  background-color: var(--mainColor);
+}
+
+.services .icon {
+  width: 120px;
+  height: 120px;
+}
+
+.services .icon {
+  border: 10px solid var(--mainColor);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.services i {
+  font-size: 40px;
+}
+
+.services .card {
+  padding: 40px 20.8px;
+  transition: all 0.3s;
+}
+
+.services .card:hover .icon {
+  border-color: #cde1f8;
+  background-color: var(--mainColor);
+  color: white;
+}
+
+.profiles,
+.numbers,
+.contact {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.numbers {
+  background-image: url(../images/counters-bg.jpg);
+}
+
+.profiles .layer,
+.numbers .layer {
+  padding-block: 128px;
+  background-color: rgba(0, 120, 255, 0.7);
+}
+
+.numbers .icon {
+  width: 60px;
+  height: 60px;
+  border: 10px solid #cde1f8;
+  box-sizing: content-box;
+  font-size: 32px;
+}
+
+.numbers span {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.numbers p {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.portfolio {
+  background-color: var(--bgColor);
+}
+
+.portfolio .title,
+.blog .title {
+  margin-bottom: 64px;
+}
+
+.contact .container,
+.portfolio .container {
+  padding-top: 64px;
+}
+
+.portfolio .card,
+.blog .card {
+  box-shadow: 0px 13px 8px -10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 48px;
+}
+
+.portfolio .card h5 {
+  font-size: 19px;
+  line-height: 23px;
+  color: rgb(30, 30, 30);
+}
+
+.portfolio .card p {
+  font-size: 13px;
+  line-height: 19px;
+  color: rgb(78, 78, 78);
+}
+
+.portfolio .card img {
+  transition: all 0.9s;
+}
+
+.portfolio .card:hover img {
+  transform: scale(1.3);
+}
+
+.portfolio .card-body {
+  padding: 32px 3% 16px 4%;
+}
+
+.portfolio .link,
+.portfolio .card span {
+  color: var(--mainColor);
+}
+
+.portfolio .link {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--mainColor);
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.profiles,
+.contact {
+  background-image: url(../images/overlay-bg.jpg);
+}
+
+.profiles h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.profiles p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.blog {
+  padding-top: 64px;
+  background-color: var(--bgColor);
+}
+
+.blog .badge {
+  display: inline;
+  padding-inline: 15px;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 500;
+  height: 30px;
+  transform: translateY(-50%);
+}
+
+.blog .card h5 {
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.blog .card p {
+  font-size: 16px;
+  color: rgb(78, 78, 78);
+  line-height: 24px;
+}
+
+.blog .card-footer .small-img {
+  width: 32px;
+  height: 32px;
+}
+
+.blog .card-footer .left span {
+  color: #1e1e1e;
+}
+
+.blog .card-footer a,
+.blog .card-body h5 a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog .card-footer a span,
+.blog .card-body h5 a {
+  transition: all 0.7s;
+}
+
+.blog .card-footer a:hover span,
+.blog .card-body h5 a:hover {
+  color: var(--mainColor);
+}
+
+.blog .card-footer .right {
+  color: rgb(78, 78, 78);
+}
+
+.contact .layer {
+  background-color: rgba(0, 120, 255, 0.7);
+  padding-top: 64px;
+}
+
+.contact .title h1::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  width: 100px;
+  height: 3px;
+  background-color: var(--mainColor);
+}
+
+.contact .row {
+  padding: 48px 20px;
+}
+
+.contact .row textarea,
+.contact .row input {
+  padding: 10px;
+}
+
+.contact .row textarea::placeholder,
+.contact .row input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(33, 37, 41);
+}
+
+.contact .row button {
+  background-color: var(--mainColor);
+  font-size: 19px;
+  line-height: 29px;
+  padding: 10px 24px;
+  border-radius: 80px;
+}
+
+.contact .message {
+  margin-bottom: 32px;
+}
+
+.contact .inner p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  color: rgb(78, 78, 78);
+}
+
+.contact .inner ul.info li span {
+  margin-right: 10px;
+  color: var(--mainColor);
+}
+
+.contact .inner ul.info li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgb(78, 78, 78);
+  list-style: none;
+}
+
+.contact ul.social li {
+  display: inline-block;
+  margin-right: 15px;
+
+  overflow: hidden;
+}
+
+.contact ul.social li a {
+  color: #1e1e1e;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 3px solid var(--mainColor);
+  transition: all 0.5s;
+}
+
+.contact ul.social li span {
+  width: 40px;
+  height: 40px;
+}
+
+.contact ul.social li a:hover {
+  background-color: var(--mainColor);
+  color: white;
+  border-color: #cde1f8;
+}
+
+footer {
+  padding-block: 25px;
+  background-color: #0062d3;
+}
+footer p.one {
+  margin-block: 0 4.8px;
+}
+
+a.back-to-top {
+  width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  bottom: 15px;
+  right: 15px;
+}
+
+.owl-dot.active span {
+  background-color: white !important; /* Change to your preferred color */
+}
+
+.owl-dot span {
+  background-color: #7cadeb !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 4px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .contact .col {
+    padding-inline: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profiles p {
+    padding: 0 80px;
+  }
+  .contact .col {
+    padding-inline: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .profiles p {
+    padding: 0 128px;
+  }
+}
+
+/* .home {
+  background-image: url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+} */
+
+/* .home .inner {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+  } */
+/* .navbar,
+.navbar-nav,
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: white;
+} */

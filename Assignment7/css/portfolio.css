@@ -1,0 +1,133 @@
+:root {
+  --mainColor: #0078ff;
+  --bgColor: #f5f5f5;
+}
+
+.nav-item {
+  --bs-nav-link-color: rgb(255, 255, 255);
+  --bs-nav-link-hover-color: rgb(255, 255, 255);
+  padding: 10px 0 10px 30px;
+}
+
+a.nav-link {
+  position: relative;
+}
+
+a.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  bottom: -5px;
+  transition: all 0.3s;
+}
+
+a.nav-link:hover::before {
+  width: 80%;
+}
+
+header {
+  background-image: url(../images/overlay-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header .layer {
+  background-color: rgba(0, 120, 255, 0.7);
+}
+
+header .text {
+  padding-block: 140px 80px;
+}
+
+header h1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 67px;
+  margin-bottom: 24px;
+}
+
+header p {
+  color: rgb(205, 225, 248);
+}
+
+header p span::before {
+  content: "/";
+  padding-inline: 5px;
+}
+
+section {
+  background-color: var(--bgColor);
+  padding-top: 16px;
+}
+
+.owl-dot.active span {
+  background-color: var(
+    --mainColor
+  ) !important; /* Change to your preferred color */
+}
+
+.owl-dot span {
+  background-color: white !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 4px !important;
+  border: 1px solid var(--mainColor);
+}
+
+section .inner .top {
+  padding: 30px 30px 46px 30px;
+  box-shadow: 0px 0 30px rgba(78, 78, 78, 0.08);
+}
+
+section .inner .top h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+section .inner .top p {
+  color: rgb(78, 78, 78);
+  font-size: 15px;
+  line-height: 23px;
+  margin-block: 10px 0;
+}
+
+section .inner .bottom {
+  padding-top: 30px;
+}
+
+section .inner .bottom h2 {
+  color: rgb(30, 30, 30);
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+section .inner .bottom p {
+  color: rgb(78, 78, 78);
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+footer {
+  padding-block: 25px;
+  background-color: #0062d3;
+}
+footer p.one {
+  margin-block: 0 4.8px;
+}
+
+a.back-to-top {
+  width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  bottom: 15px;
+  right: 15px;
+}
